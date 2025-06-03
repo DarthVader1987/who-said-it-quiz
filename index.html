@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who Said It? 🧠</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🧠 Who Said It? 🔮</h1>
+
+  <div id="category-box">
+    <h2>Select a Category</h2>
+    <button onclick="startQuiz('Football')">⚽ Football</button>
+    <button onclick="startQuiz('Harry Potter')">🧙‍♂️ Harry Potter</button>
+    <button onclick="startQuiz('Movies')">🎬 Movies</button>
+  </div>
+
+  <div id="quiz-box" style="display: none;">
+    <p id="score">Score: 0 | Question: 1 of X</p>
+    <blockquote id="quote">Loading...</blockquote>
+    <div id="options"></div>
+    <div id="result"></div>
+  </div>
+
+
+  <!-- Load the data first -->
+  <script src="quotes.js"></script>
+
+  <!-- Load the logic, and start the quiz once everything is loaded -->
+  <script src="script.js"></script>
+  <script>
+    window.onload = function () {
+      showQuestion();
+    };
+  </script>
+</body>
+</html>
